@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+        <title>Redstore | Ecommerce website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+          .cart-dropdown {
+              position: relative;
+              display: inline-block;
+          }
+  
+          .cart-item {
+              display: flex;
+              align-items: center;
+          }
+  
+          .cart-item img {
+              width: 50px;
+              height: 50px;
+              margin-right: 10px;
+          }
+  
+          .modal-content {
+              background-color: #f9f9f9;
+          }
+      </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="sample.html"><img src="images/logos.png" width="125px"></a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="sample.html">Home</a></li>
+                            <li><a href="#product">Products</a></li>
+                            <li><a href="account.html">Account</a></li>
+                        </ul>
+                    </nav>
+                    <div class="cart-dropdown">
+                      <img src="images/cart.png" width="30px" height="30px" alt="Cart" id="cart-icon">
+                      <span id="cart-count">0</span>
+                  </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h1>Give your Workout <br>A New Style!</h1>
+                        <p>Success isn't always about greatness. It's about consistency. Consistent<br>hard work gains success. Greatness will come.</p>
+                        <a href="#product" class="btn">Explore Now &#8594;</a>
+                    </div>
+                    <div class="col-2">
+                        <img src="images/image1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--------------------------- featured categories------------------------>
+        <div class="container mt-5 pt-5">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="text">
+                  <a href="#women"><img src="images/shoe1.jpg" width="400" height="400"></a>
+                  <div class="centered">
+                    <h1>WOMEN</h1>
+                    <h6>NEW COLLECTION</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="row">
+                  <div class="text">
+                    <a href="#baby"><img src="images/shoe2.jpg" width="400" height="200"></a>
+                    <div class="centered">
+                      <h1>BABYS</h1>
+                      <h6>NEW COLLECTION</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="text">
+                    <a href="#kids"><img src="images/shoe3.jpg" width="400" height="200"></a>
+                    <div class="centered">
+                      <h1>KIDS</h1>
+                      <h6>NEW COLLECTION</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="text">
+                  <a href="#men"><img src="images/shoe4.jpg" width="400" height="400"></a>
+                  <div class="centered">
+                    <h1>MEN</h1>
+                    <h6>NEW COLLECTION</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!--------------------------- featured Products-------------------------->
+        <div class="small-container" id="product">
+          <h2 class="title mt-5">Featured Products</h2>
+          <div class="row">
+              <div class="col-4">
+                  <img src="images/shoe5.jpg" alt="Downshifter Sports Shoes"></a>
+                  <h4>Downshifter Sports Shoes</h4></a>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                      <i class="fa fa-star-o"></i>
+                  </div>
+                  <p>$50.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="1" data-name="Downshifter Sports Shoes" data-price="50.00" data-img="images/shoe5.jpg">Add to Cart</button>
+              </div>
+              <div class="col-4">
+                  <img src="images/shoe6.jpg" alt="Lace-Up Running Shoes"></a>
+                  <h4>Lace-Up Running Shoes</h4>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <p>$35.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="2" data-name="Lace-Up Running Shoes" data-price="35.00" data-img="images/shoe6.jpg">Add to Cart</button>
+              </div>
+              <div class="col-4">
+                  <img src="images/shoe7.jpg" alt="Lace Fastening Shoes"></a>
+                  <h4>Lace Fastening Shoes</h4>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-o"></i>
+                  </div>
+                  <p>$15.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="3" data-name="Lace Fastening Shoes" data-price="15.00" data-img="images/shoe7.jpg">Add to Cart</button>
+              </div>
+              <div class="col-4">
+                  <img src="images/shoe8.jpg" alt="Flat Lace-Fastening Shoes"></a>
+                  <h4>Flat Lace-Fastening Shoes</h4>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-o"></i>
+                      <i class="fa fa-star-o"></i>
+                  </div>
+                  <p>$48.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="4" data-name="Flat Lace-Fastening Shoes" data-price="48.00" data-img="images/shoe8.jpg">Add to Cart</button>
+              </div>
+          </div>
+  
+          <h2 class="title">Latest Products</h2>
+          <div class="row">
+              <div class="col-4">
+                  <img src="images/shoe9.jpg" alt="Flat Heel Gray Shoes"></a>
+                  <h4>Flat Heel Gray Shoes</h4>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                      <i class="fa fa-star-o"></i>
+                  </div>
+                  <p>$50.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="5" data-name="Flat Heel Gray Shoes" data-price="50.00" data-img="images/shoe9.jpg">Add to Cart</button>
+              </div>
+              <div class="col-4">
+                  <img src="images/shoe10.jpg" alt="Lace-Fastening Black Shoes"></a>
+                  <h4>Lace-Fastening Black Shoes</h4>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <p>$21.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="6" data-name="Lace-Fastening Black Shoes" data-price="21.00" data-img="images/shoe10.jpg">Add to Cart</button>
+              </div>
+              <div class="col-4">
+                  <img src="images/shoe11.jpg" alt="Running Lace Shoes"></a>
+                  <h4>Running Lace Shoes</h4>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-o"></i>
+                  </div>
+                  <p>$99.00</p>
+                  <button class="btn btn-primary add-to-cart" data-id="7" data-name="Running Lace Shoes" data-price="99.00" data-img="images/shoe11.jpg">Add to Cart</button>
+              </div>
+          </div>
+      </div>
+        
+        <!------------------------------- offer  ---------------------------------->
+        <section class="hero mt-5">
+            <div class="overlay"></div>
+            <div class="hero-content">
+              <p>THE SEASON BEGINS</p><br>
+              <h2>PROMOTION <span style="color: #ff5722;">SALE OFF 50%</span></h2>
+              <a href="#" class="btn btn-primary">SHOP NOW</a>
+              <br><br>
+              <p>HURRY BEFORE OFFER ENDS</p>
+            </div>
+          </section>
+          
+          <!-----------------------------collections--------------------------------->
+          <div class="container-fluid" id="women">
+            <h2 class="title mt-5">Women New Collections</h2>
+            <div class="row">
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/women1.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Pink Flat Sandals</h4>
+                    <p>$40.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="8" data-name="Pink Flat Sandals" data-price="40.00" data-img="images/women1.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/women2.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Sparx sneakers</h4>
+                    <p class="card-text">$55.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="9" data-name="Sparx sneakers" data-price="55.00" data-img="images/women2.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/women3.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Wedged heels</h4>
+                    <p class="card-text">$49.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="10" data-name="Wedged heels" data-price="49.00" data-img="images/women3.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/women4.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Blue Kitten heels</h4>
+                    <p class="card-text">$51.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="11" data-name="Blue Kitten heels" data-price="51.00" data-img="images/women4.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/women5.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Studded heels</h4>
+                    <p class="card-text">46.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="12" data-name="Studded heels" data-price="46.00" data-img="images/women5.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid" id="baby">
+            <h2 class="title mt-5">Baby New Collections</h2>
+            <div class="row">
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/baby1.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Infant soft Sneaker</h4>
+                    <p class="card-text">$25.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="13" data-name="Infant soft Sneaker" data-price="25.00" data-img="images/baby1.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/baby2.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Toddler walking shoe</h4>
+                    <p class="card-text">$26.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="14" data-name="Toddler walking shoe" data-price="26.00" data-img="images/baby2.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/baby3.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Animal cotton shoe</h4>
+                    <p class="card-text">$20.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="15" data-name="Animal cotton shoe" data-price="20.00" data-img="images/baby3.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/baby4.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Breathable shoe</h4>
+                    <p class="card-text">$24.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="16" data-name="Breathable shoe" data-price="24.00" data-img="images/baby4.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/baby5.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Baby soft shoe</h4>
+                    <p class="card-text">$22.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="17" data-name="Baby soft shoe" data-price="22.00" data-img="images/baby5.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid" id="kids">
+            <h2 class="title mt-5">Kids New Collections</h2>
+            <div class="row">
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/kid1.jpeg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Silver ballerina Flat</h4>
+                    <p class="card-text">$35.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="18" data-name="Silver ballerina Flat" data-price="35.00" data-img="images/kid1.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/kid2.jpeg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Black Uniform Shoes</h4>
+                    <p class="card-text">$33.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="19" data-name="Black Uniform Shoes" data-price="33.00" data-img="images/kid2.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/kid3.jpeg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Pink laceup girls shoe</h4>
+                    <p class="card-text">$32.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="20" data-name="Pink laceup girls shoe" data-price="32.00" data-img="images/kid3.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/kid4.jpeg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Black sports sandals</h4>
+                    <p class="card-text">$31.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="21" data-name="Black sports sandals" data-price="31.00" data-img="images/kid4.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/kid5.jpeg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Pink printed sandals</h4>
+                    <p class="card-text">$35.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="22" data-name="Pink printed sandals" data-price="35.00" data-img="images/kid5.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="container-fluid" id="men">
+            <h2 class="title mt-5">Mens New Collections</h2>
+            <div class="row">
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/men1.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Puma Men Sneaker</h4>
+                    <p class="card-text">$52.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="23" data-name="Puma Men Sneaker" data-price="52.00" data-img="images/men1.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/men2.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Bata Casual shoe</h4>
+                    <p class="card-text">$50.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="24" data-name="Bata Casual shoe" data-price="50.00" data-img="images/men2.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3">
+                  <img class="card-img-top" src="images/men3.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Classic clog Crocs</h4>
+                    <p class="card-text">$48.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="25" data-name="Classic clog Crocs" data-price="48.00" data-img="images/men3.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/men4.jpg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Adidas sandals</h4>
+                    <p class="card-text">$44.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="26" data-name="Adidas sandals" data-price="44.00" data-img="images/men4.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card p-3" >
+                  <img class="card-img-top" src="images/men5.jpeg" alt="Card image" width= "300" height="200">
+                  <div class="card-body">
+                    <h4 class="card-title">Classic sports shoe</h4>
+                    <p class="card-text">$46.00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="27" data-name="Classic sports shoe" data-price="46.00" data-img="images/men5.jpg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          
+          <!--------------------------------app ----------------------------------->
+              <div class="container-fluid text-center mt-5 p-5" style="background: radial-gradient(#fff, #ffd6d6);">
+                <div class="row text-center slideanim">
+                  <h3 class="text-dark p-3">Download our new app today! Don't miss our mobile-only offers and shop with Android Play.</h3>
+                  <div class="app-logo">
+                    <img src="images/app1.png" alt="">
+                    <img src="images/app2.png" alt="">
+                </div>
+                </div>
+            </div>
+        
+        
+        <!------------------------------reviews---------------------------------->
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        <div class="rating"> 
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="images/user-1.png">
+                        <h3>Sean Parkar</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="images/user-2.png">
+                        <h3>Mike Smith</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        <div class="rating"> 
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="images/user-3.png">
+                        <h3>Mabel Joe</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!----------------------------------Brands------------------------------------>
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="images/logo1.jpg" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/logo2.jpg" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/logo3.jpg" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/logo4.jpg" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/logo5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!----------------------------------footer------------------------------------->
+        <div class="container-fluid mt-5" style="background: radial-gradient(#fff, #ffd6d6);">
+            <div class="row pt-5">
+              <div class="col">
+                <div class="row">
+                  <div class="col" style="text-align: right;">
+                    <i class="fa-regular fa-paper-plane " style="font-size:60px;color:rgb(18, 15, 15);text-shadow:2px 2px 4px #000000;"></i>
+                  </div>
+                  <div class="col">
+                    <h3>Sign up to Newletter</h3>
+                    <p>...and receive <b>$20 coupon for first shopping</b></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input-group mb-3 p-3">
+                  <input type="text" class="form-control" placeholder="Enter Your Email">
+                  <button type="button" style="background-color: aqua; width: 90px; ">Sign up</button>
+                </div>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-sm-1"></div>
+              <div class="col"  style="text-align: right;">
+                <i class="fa-brands fa-facebook-f fa" style="color:black;font-size:larger;"></i>
+              </div>
+              <div class="col" style="text-align: left;">Facebook</div>
+              <div class="col"  style="text-align: right;">
+                <i class="fa-brands fa-twitter fa" style="color: black;font-size:larger;"></i>
+              </div>
+              <div class="col" style="text-align: left;">Twitter</div>
+              <div class="col"  style="text-align: right;">
+                <i class="fa-brands fa-google-plus-g fa" style="color: black;font-size:larger;"></i>
+              </div>
+              <div class="col" style="text-align: left;">Google</div>
+              <div class="col"  style="text-align: right;">
+                <i class="fa-brands fa-instagram fa" style="color: black;font-size:larger;"></i>
+              </div>
+              <div class="col" style="text-align: left;">Instagram</div>
+              <div class="col"  style="text-align: right;">
+                <i class="fa-brands fa-whatsapp fa" style="color: black;font-size:larger;"></i>
+              </div>
+              <div class="col" style="text-align: left;">Whatsapp</div>
+              <div class="col-sm-1"></div></div>
+          
+          <hr>
+          
+            <div class="row p-4">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-phone-volume fa" style="font-size:48px;"></i>
+                  </div>
+                  <div class="col">
+                    <h5>GOT QUESTIONS ? CALL US 24/7 !</h5>
+                    <h4>(800)8001-8588</h4>
+                    <h4>(0600)874 548</h4>
+                    <p>33,Anna Nagar, Chennai. </p>
+                    <p><i class="fa-solid fa-location-dot"></i>  Find us on map</p>
+                  </div>
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-credit-card fa" style="font-size:48px;"></i>
+                  </div>
+                  <div class="col">
+                    <h5>WE ARE USING SAFE PAYMENTS</h5><br><br>
+                    <img src="images/logo6.jpeg" width="20%" height="20%">
+                    <img src="images/logo7.jpeg" width="20%" height="20%">
+                    <img src="images/logo8.jpeg" width="20%" height="20%">
+                    <img src="images/logo9.png" width="20%" height="20%">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <h5>FIND IT FAST</h5>
+                <p>Ankle Boots</p>
+                <p>Casual shoes</p>
+                <p>ESpadrilles</p>
+                <p>Kitten Heels</p>
+                <p>Saddle</p>
+                <p>Sandals</p>
+              </div>
+              <div class="col">
+                <h5></h5><br>
+                <p>Sneakers</p>
+                <p>Snow Boots</p>
+                <p>Sports Shoes</p>
+                <p>Studded Heels</p>
+                <p>Wedge Heels</p>
+                <p>Leather</p>
+              </div>
+              <div class="col">
+                <h5>CUSTOMER CARE</h5>
+                <p>My Account</p>
+                <p>Track Order</p>
+                <p>Wishlist</p>
+                <p>Shop</p>
+                <p>About Us</p>
+                <p>Returns/Exchange</p>
+                <p>FAQs</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid p-3 text-light" style="background-color: #000000; text-align: center;">
+          <p>Copyright@2024fitbit Shoes Market Theme. All rights are reserved.</p>
+          </div>
+
+            <!----------------------------- Modal ------------------------------------>
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>Product</th>
+                              <th>Quantity</th>
+                              <th>Subtotal</th>
+                          </tr>
+                      </thead>
+                      <tbody id="cart-table-body">
+                          <!-- Cart items will be dynamically inserted here -->
+                      </tbody>
+                  </table>
+                  <div class="total-price">
+                      <table class="table">
+                          <tr>
+                              <td>Subtotal</td>
+                              <td id="cart-subtotal">$0.00</td>
+                          </tr>
+                          <tr>
+                              <td>Tax</td>
+                              <td id="cart-tax">$0.00</td>
+                          </tr>
+                          <tr>
+                              <td>Total</td>
+                              <td id="cart-total">$0.00</td>
+                          </tr>
+                      </table>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="checkout-button">Checkout</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const cartButtons = document.querySelectorAll(".add-to-cart");
+                const cartCountElement = document.getElementById("cart-count");
+                const cartTableBody = document.getElementById("cart-table-body");
+                const cartSubtotal = document.getElementById("cart-subtotal");
+                const cartTax = document.getElementById("cart-tax");
+                const cartTotal = document.getElementById("cart-total");
+                const cartIcon = document.getElementById("cart-icon");
+                const checkoutButton = document.getElementById("checkout-button");
+                let cart = [];
+        
+                cartButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        const productId = this.getAttribute("data-id");
+                        const productName = this.getAttribute("data-name");
+                        const productPrice = parseFloat(this.getAttribute("data-price"));
+                        const productImg = this.getAttribute("data-img");
+        
+                        const existingProduct = cart.find(item => item.id === productId);
+                        if (existingProduct) {
+                            existingProduct.quantity += 1;
+                        } else {
+                            cart.push({
+                                id: productId,
+                                name: productName,
+                                price: productPrice,
+                                quantity: 1,
+                                img: productImg
+                            });
+                        }
+        
+                        updateCart();
+                    });
+                });
+        
+                cartIcon.addEventListener("click", function () {
+                    const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+                    cartModal.show();
+                });
+        
+                checkoutButton.addEventListener("click", function () {
+                    cart = []; // Clear the cart array
+                    updateCart(); // Update cart display
+                });
+        
+                function updateCart() {
+                    cartCountElement.innerText = cart.reduce((total, item) => total + item.quantity, 0);
+        
+                    if (cart.length === 0) {
+                        cartTableBody.innerHTML = '<tr><td colspan="3">Your cart is empty.</td></tr>';
+                        cartSubtotal.innerText = "$0.00";
+                        cartTax.innerText = "$0.00";
+                        cartTotal.innerText = "$0.00";
+                    } else {
+                        cartTableBody.innerHTML = "";
+                        let subtotal = 0;
+                        cart.forEach(item => {
+                            subtotal += item.price * item.quantity;
+                            const cartItem = document.createElement("tr");
+                            cartItem.innerHTML = `
+                                <td>
+                                    <div class="cart-info">
+                                        <img src="${item.img}" alt="${item.name}">
+                                        <div>
+                                            <p>${item.name}</p>
+                                            <small>Price: $${item.price.toFixed(2)}</small><br>
+                                            <a href="#" class="remove-item" data-id="${item.id}">Remove</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><input type="number" value="${item.quantity}" class="quantity-input" data-id="${item.id}" min="1"></td>
+                                <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                            `;
+                            cartTableBody.appendChild(cartItem);
+                        });
+        
+                        const tax = subtotal * 0.1;
+                        const total = subtotal + tax;
+                        cartSubtotal.innerText = `$${subtotal.toFixed(2)}`;
+                        cartTax.innerText = `$${tax.toFixed(2)}`;
+                        cartTotal.innerText = `$${total.toFixed(2)}`;
+        
+                        document.querySelectorAll(".remove-item").forEach(button => {
+                            button.addEventListener("click", function (event) {
+                                event.preventDefault();
+                                const productId = this.getAttribute("data-id");
+                                cart = cart.filter(item => item.id !== productId);
+                                updateCart();
+                            });
+                        });
+        
+                        document.querySelectorAll(".quantity-input").forEach(input => {
+                            input.addEventListener("change", function () {
+                                const productId = this.getAttribute("data-id");
+                                const newQuantity = parseInt(this.value);
+                                const product = cart.find(item => item.id === productId);
+                                if (product) {
+                                    product.quantity = newQuantity;
+                                    updateCart();
+                                }
+                            });
+                        });
+                    }
+                }
+            });
+        </script>
+    
+
+    </body>
+</html>
